@@ -22,7 +22,7 @@ class GraphProjectUPoint(nn.Module):
 
         # normalized coord [-1., 1.]
         coords = torch.bmm(proj_mat, point4d.transpose(1, 2)).transpose(1, 2)
-
+        #输出proj_mat的格式,是否需要转换？
         # trnasfer to image coord [0, 1]
         x = (coords[:, :, 0] / coords[:, :, 3] + 1) / 2
         y = 1 - (coords[:, :, 1] / coords[:, :, 3] + 1) / 2
