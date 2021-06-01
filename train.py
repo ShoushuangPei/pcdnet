@@ -17,7 +17,7 @@ def make_input_dict(param, data):
         input_dict['render_img'] = data.y
         input_dict['normal_img'] = None
         input_dict['mask'] = None
-        input_dict['proj_mat'] = None
+        input_dict['proj_mat'] = None #这里是否需要修改?
         input_dict['batch'] = data.batch
         input_dict['vertex'] = data.pos
         input_dict['face'] = None
